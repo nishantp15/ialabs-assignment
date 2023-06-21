@@ -2,10 +2,14 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 
+
 export const AppContext = createContext();
 let token;
 let name;
-
+if (typeof window !== "undefined") {
+    token = window.localStorage.getItem("userToken");
+    name = window.localStorage.getItem("userName");
+  }
 function AppContextProvider({ children }) {
   const [authState, setAuthState] = useState({
     isAuth: false,
@@ -14,10 +18,7 @@ function AppContextProvider({ children }) {
   });
 
   useEffect(()=>{
-    if (typeof window !== undefined) {
-        token = window.localStorage.getItem("userToken");
-        name = window.localStorage.getItem("userName");
-      }
+    
   },[authState])
 
   const loginUser = (token, name) => {
