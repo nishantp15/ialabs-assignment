@@ -6,7 +6,7 @@ import { useContext } from "react";
 import styles from './Dashboard.module.css'
 const Dashboard = () => {
   const { authState, logoutUser } = useContext(AppContext);
-  let [token, setToken] = useState(localStorage.getItem("userToken") || null);
+ 
   let router = useRouter();
   if (!authState.token) {
     router?.push("/dashboard/login");
