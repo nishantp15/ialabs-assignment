@@ -8,13 +8,12 @@ import { AppContext } from '../AuthProvider/AuthProvider'
 
 const Navbar = () => {
   const {authState, logoutUser} = useContext(AppContext)
-  let [token, setToken] = useState(localStorage.getItem("userToken")||"");
+  // let [token, setToken] = useState(localStorage.getItem("userToken")||"");
   let router = useRouter()
   function logout(){
     logoutUser()
     localStorage.removeItem('userToken',"");
     localStorage.removeItem('userName',"");
-    setToken(null);
     router?.push('/dashboard/login')
   }
 
