@@ -11,7 +11,7 @@ const Dashboard = () => {
   if (!authState.token) {
     return <div className={styles.dashboard}><p>Please login first</p></div>
   }
-  console.log(authState.token);
+
   return <div className={styles.dashboard}>
     <h1>Welcome</h1>
     <p>No data available</p>
