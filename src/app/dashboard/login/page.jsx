@@ -41,13 +41,15 @@ const Login = () => {
       if (data.jwt) {
         alert("login successful");
         loginUser(data.jwt, data.user.firstName);
-        localStorage.setItem("userToken", data.jwt);
-        localStorage.setItem("userName",  data.user.firstName);       
+        if (typeof window !== undefined) {
+          localStorage.setItem("userToken", data.jwt);
+          localStorage.setItem("userName", data.user.firstName);
+        }
         router?.push("/dashboard");
       } else {
         alert(data.error.message);
       }
-      console.log(data.user.firstName)
+      console.log(data.user.firstName);
     } else {
       alert("Incomplete details");
     }
