@@ -14,9 +14,7 @@ function AppContextProvider({ children }) {
     token: token || null,
     name: name || null,
   },);
-  useEffect(() => {
-   
-  },[authState]);
+  
   const loginUser = (token, name) => {
     token !== undefined &&
       setAuthState({
