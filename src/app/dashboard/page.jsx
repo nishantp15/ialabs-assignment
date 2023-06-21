@@ -15,7 +15,7 @@ const Dashboard = () => {
   return <div className={styles.dashboard}>
     <h1>Welcome</h1>
     <p>No data available</p>
-  </div>;
+  </div>
 };
 
 export default Dashboard;
