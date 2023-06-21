@@ -1,0 +1,39 @@
+.loginForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.loginForm>form{
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    width: 35vw;
+    /* height: 50vh; */
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:5vh;
+    border: 1px solid gray;
+    border-radius: 10px;
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+}
+
+.loginForm>form>input{
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 20px;
+}
+
+.loginForm input[type=submit]{
+    background-color: teal;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
