@@ -5,16 +5,20 @@ import { createContext } from "react";
 export const AppContext = createContext();
 let token;
 let name;
-if (typeof window !== undefined) {
-  token = window.localStorage.getItem("userToken");
-  name = window.localStorage.getItem("userName");
-}
+
 function AppContextProvider({ children }) {
   const [authState, setAuthState] = useState({
     isAuth: false,
     token: token || null,
     name: name || null,
   });
+
+  useEffect(()=>{
+    if (typeof window !== undefined) {
+        token = window.localStorage.getItem("userToken");
+        name = window.localStorage.getItem("userName");
+      }
+  })
 
   const loginUser = (token, name) => {
     token !== undefined &&
