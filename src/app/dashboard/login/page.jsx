@@ -13,7 +13,7 @@ const Login = () => {
   let [formData, setFormData] = useState(initialData);
   const { authState, loginUser } = useContext(AppContext);
   let router = useRouter();
-  let [token, setToken] = useState("");
+
 
   function addFormData(e) {
     let { name, value } = e.target;
@@ -42,8 +42,8 @@ const Login = () => {
         alert("login successful");
         loginUser(data.jwt, data.user.firstName);
         if (typeof window !== undefined) {
-          localStorage.setItem("userToken", data.jwt);
-          localStorage.setItem("userName", data.user.firstName);
+          window.localStorage.setItem("userToken", data.jwt);
+          window.localStorage.setItem("userName", data.user.firstName);
         }
         router?.push("/dashboard");
       } else {

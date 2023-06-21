@@ -6,8 +6,8 @@ export const AppContext = createContext();
 let token;
 let name;
 if (typeof window !== undefined) {
-  token = localStorage.getItem("userToken");
-  name = localStorage.getItem("userName");
+  token = window.localStorage.getItem("userToken");
+  name = window.localStorage.getItem("userName");
 }
 function AppContextProvider({ children }) {
   const [authState, setAuthState] = useState({

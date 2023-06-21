@@ -13,8 +13,8 @@ const Navbar = () => {
   function logout() {
     logoutUser();
     if (typeof window !== undefined) {
-      localStorage.removeItem("userToken", "");
-      localStorage.removeItem("userName", "");
+      window.localStorage.removeItem("userToken", "");
+      window.localStorage.removeItem("userName", "");
     }
     router?.push("/dashboard/login");
   }
