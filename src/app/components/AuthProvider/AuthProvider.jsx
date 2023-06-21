@@ -18,7 +18,7 @@ function AppContextProvider({ children }) {
         token = window.localStorage.getItem("userToken");
         name = window.localStorage.getItem("userName");
       }
-  })
+  },[authState])
 
   const loginUser = (token, name) => {
     token !== undefined &&
