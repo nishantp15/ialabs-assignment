@@ -8,8 +8,8 @@ function AppContextProvider({ children }) {
     let token;
     let name;
   useEffect(() => {
-    token = localStorage.getItem("userToken");
-    name = localStorage.getItem("userName");
+    // token = localStorage.getItem("userToken");
+    // name = localStorage.getItem("userName");
   });
 
   const [authState, setAuthState] = useState({

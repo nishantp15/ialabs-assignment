@@ -12,8 +12,8 @@ const Navbar = () => {
   let router = useRouter()
   function logout(){
     logoutUser()
-    localStorage.removeItem('userToken',"");
-    localStorage.removeItem('userName',"");
+    // localStorage.removeItem('userToken',"");
+    // localStorage.removeItem('userName',"");
     router?.push('/dashboard/login')
   }
 
