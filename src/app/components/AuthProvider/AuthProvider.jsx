@@ -3,20 +3,20 @@ import { useEffect, useState } from "react";
 import { createContext } from "react";
 
 export const AppContext = createContext();
-
+let token;
+let name;
+token = localStorage.getItem("userToken");
+name = localStorage.getItem("userName");
 function AppContextProvider({ children }) {
-    let token;
-    let name;
-  useEffect(() => {
-    token = localStorage.getItem("userToken");
-    name = localStorage.getItem("userName");
-  });
-
+   
   const [authState, setAuthState] = useState({
     isAuth: false,
     token: token || null,
     name: name || null,
-  });
+  },);
+  useEffect(() => {
+   
+  },[authState]);
   const loginUser = (token, name) => {
     token !== undefined &&
       setAuthState({
