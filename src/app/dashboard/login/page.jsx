@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { AppContext } from "@/app/components/AuthProvider/AuthProvider";
 
-const login = () => {
+const Login = () => {
   let initialData = { identifier: "", password: "" };
   let [formData, setFormData] = useState(initialData);
   const { authState, loginUser } = useContext(AppContext);
@@ -80,4 +80,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
