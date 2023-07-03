@@ -14,7 +14,6 @@ const Login = () => {
   const { authState, loginUser } = useContext(AppContext);
   let router = useRouter();
 
-
   function addFormData(e) {
     let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -49,7 +48,7 @@ const Login = () => {
       } else {
         alert(data.error.message);
       }
-      console.log(data.user.firstName);
+      
     } else {
       alert("Incomplete details");
     }

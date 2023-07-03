@@ -26,9 +26,9 @@ const Signup = () => {
    async function submitForm(e){
         e.preventDefault();
         let {email, username, password} = formData;
+        let data = await getData();
         
         if(email!==''&&username!==''&& password!=''){
-            let data = await getData();
             if(data.jwt){
                 alert("Registered successfully");
                 router?.push('/dashboard/login')
